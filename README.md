@@ -11,7 +11,8 @@ myshedule_new_url = shedule.Shedule("http://new_address.com")
 ```
 
 Для тестового режима предусмотрена возможность инициальзации с 2 параметрами: 1) путь до html файла, 2) флаг, указывающий, что используется режим чтения файла, а не веб страницы.
-```myshedule = shedule.Shedule("page.html", True)
+```
+myshedule = shedule.Shedule("page.html", True)
 ```
 
 Информацию о изменениях можно получать сразу после инициализации, методом getGroupsInfo.
