@@ -1,6 +1,4 @@
-# shedule_announcer
-Send a message to you in telegram, when shedule on website changes.
-Сама система делится на 2 части: парсер сайта и бот в телеграме.
+Cама система делится на 2 части: парсер сайта и бот в телеграме.
 # Parser:
 Импортируйте файл.
 ```import shedule```
