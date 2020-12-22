@@ -9,11 +9,7 @@ class Shedule:
     def __init__(self, url = None, filemode = False):
         self.filemode = filemode
         if url: self.mainurl = url
-        if not self.filemode:
-            self.index = bs(requests.get(self.mainurl).text, 'html.parser')
-        else:
-            self.index = bs(open(self.mainurl, "r", encoding="utf-8").read(), 'html.parser')
-        self.lines = self.index.find("table").find_all("tr")
+        self.update()
 
     def update(self):
         if not self.filemode:
