@@ -48,13 +48,13 @@ class Shedule:
                     if tr.contents[flag].p.text != "\xa0":
                         break
                     changes.append({"num": int(tr.contents[flag+1].p.text), "name": tr.contents[flag+2].p.text})
-
-                if tr.contents[0].p.text != "\xa0":
-                    if tr.contents[0].p.text == gname:
-                        flag = 0
-                        changes.append({"num": int(tr.contents[flag+1].p.text), "name": tr.contents[flag+2].p.text})
-                if tr.contents[3].p.text != "\xa0":
-                    if tr.contents[3].p.text == gname:
-                        flag = 3
-                        changes.append({"num": int(tr.contents[flag+1].p.text), "name": tr.contents[flag+2].p.text})
+                else:
+                    if tr.contents[0].p.text != "\xa0":
+                        if tr.contents[0].p.text.replace(" ", "") == gname:
+                            flag = 0
+                            changes.append({"num": int(tr.contents[flag+1].p.text), "name": tr.contents[flag+2].p.text})
+                    if tr.contents[3].p.text != "\xa0":
+                        if tr.contents[3].p.text.replace(" ", "") == gname:
+                            flag = 3
+                            changes.append({"num": int(tr.contents[flag+1].p.text), "name": tr.contents[flag+2].p.text})
         return changes
