@@ -45,7 +45,7 @@ class Shedule:
         for tr in self.lines:
             if len(tr) == 6:
                 if flag != -1:
-                    if tr.contents[flag].p.text != "\xa0":
+                    if tr.contents[flag].p.text != "\xa0" or tr.contents[flag+1].p.text == "\xa0" or tr.contents[flag+2].p.text == "\xa0":
                         break
                     changes.append({"num": int(tr.contents[flag+1].p.text), "name": tr.contents[flag+2].p.text})
                 else:
